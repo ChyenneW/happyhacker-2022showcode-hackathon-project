@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Challenge from "./Challenge";
+import UiChange from "./UiChange";
 
 import Closing from "./Closing";
 import Footer from "./Footer";
@@ -11,7 +12,7 @@ function App() {
     <div className="App">
       <Header />
       <Challenge />
-      <section>Section for UI change feature</section>
+      <UiChange />
       <section>Section for audial check</section>
       <Closing />
       <Footer />
