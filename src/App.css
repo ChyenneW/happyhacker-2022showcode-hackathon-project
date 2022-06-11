@@ -12,6 +12,11 @@
   margin: 10px;
   text-align: left;
 }
+.Section img {
+  max-width: 85%;
+  display: block;
+  margin: 0 auto;
+}
 
 .Footer {
   padding: 30px;

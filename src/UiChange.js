@@ -1,4 +1,5 @@
 import React from "react";
+import interfaceChange from "./images/interfaceChange.png";
 
 export default function UiChange() {
   return (
@@ -24,6 +25,22 @@ export default function UiChange() {
         instead the game should be set to a grey or bland color scheme, making
         the gamer less appealing to the eye.
       </p>
+
+      <img
+        src={interfaceChange}
+        alt="Screenshot of the flow of progression
+      for this feature"
+      />
+      <small>
+        <a
+          href="https://www.figma.com/file/4mPLM1vuIK7vdJldZgh6PD/UI-Change-FlowChart?node-id=0%3A1"
+          title="flowchart's figma file"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Blurry? Click here.
+        </a>
+      </small>
     </section>
   );
 }

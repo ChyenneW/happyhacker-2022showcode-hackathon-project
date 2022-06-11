@@ -1,4 +1,5 @@
 import React from "react";
+import audialCheck from "./images/audialCheck.png";
 
 export default function AudialCheck() {
   return (
@@ -29,6 +30,22 @@ export default function AudialCheck() {
         effect on grabbing the gamer's attention, and envock a true
         self-reflection over the reality check questions.
       </p>
+
+      <img
+        src={audialCheck}
+        alt="Screenshot of the flow of progression
+      for this feature"
+      />
+      <small>
+        <a
+          href="https://www.figma.com/file/rRScnD5HCXovP9sXABN5tG/Audial-Check-Feature?node-id=0%3A1"
+          title="flowchart's figma file"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Blurry? Click here.
+        </a>
+      </small>
     </section>
   );
 }
