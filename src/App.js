@@ -1,7 +1,7 @@
 import Header from "./Header";
 import Challenge from "./Challenge";
 import UiChange from "./UiChange";
-
+import AudialCheck from "./AudialCheck";
 import Closing from "./Closing";
 import Footer from "./Footer";
 
@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Challenge />
       <UiChange />
-      <section>Section for audial check</section>
+      <AudialCheck />
       <Closing />
       <Footer />
     </div>
