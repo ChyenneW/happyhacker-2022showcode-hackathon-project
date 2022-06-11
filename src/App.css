@@ -1,3 +1,16 @@
 .App {
   text-align: center;
 }
+
+.Header {
+  padding: 30px;
+  margin: 10px;
+}
+
+.Footer {
+  padding: 30px;
+  margin: 10px;
+}
+.Footer a {
+  text-decoration: none;
+}
