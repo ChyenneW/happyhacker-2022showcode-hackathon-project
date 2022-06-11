@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
+import UiChangeExample from "./UiChangeExample";
 import interfaceChange from "./images/interfaceChange.png";
 
 export default function UiChange() {
+  let [uiSetting, setUi] = useState("color");
+
+  function handleClickBland(event) {
+    event.preventDefault();
+    setUi("bland");
+  }
+
+  function handleClickColor(event) {
+    event.preventDefault();
+    setUi("color");
+  }
+
   return (
     <section className="Section">
       <h3>Turn on the bland</h3>
@@ -40,6 +53,11 @@ export default function UiChange() {
         >
           Blurry? Click here.
         </a>
+
+        <button onClick={handleClickBland}>Its been 3 hours</button>
+        <button onClick={handleClickColor}>Its been 3 minutes</button>
+
+        <UiChangeExample uiSetting={uiSetting} />
       </small>
     </section>
   );
