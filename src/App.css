@@ -46,6 +46,22 @@
   grid-row: 1;
 }
 
+#UiExample {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: large;
+  text-align: center;
+}
+
+.demoUi {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: large;
+  text-align: center;
+}
+
 .featureExample {
   display: block;
   margin: 0 auto;

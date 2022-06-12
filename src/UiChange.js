@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import UiChangeExample from "./UiChangeExample";
 import interfaceChange from "./images/interfaceChange.png";
 import uiDemo from "./images/uiDemo.mp4";
+import uiDemoW from "./images/uiDemo.webm";
 
 export default function UiChange() {
   let [uiSetting, setUi] = useState("color");
@@ -59,8 +60,8 @@ export default function UiChange() {
           Blurry? Click here.
         </a>
       </small>
-      <div className="container" id="UiExample">
-        <div className="row">
+      <div className="container">
+        <div className="row" id="UiExample">
           <button onClick={triggerAlert} className="btn-primary col-3">
             Try mock example
           </button>
@@ -68,12 +69,14 @@ export default function UiChange() {
             <UiChangeExample uiSetting={uiSetting} />
           </div>
         </div>
-        <div className="row">
-          <div className=" col-6 demoUi">
-            <video width="80%" hight="80%" controls>
-              <source scr={uiDemo} type="video/mp4" />
+        <div className="row mt-5 demoUi">
+          <div className=" col-6 ">
+            <video width="80%" hight="400px" controls>
+              <source src={uiDemo} type="video/mp4" />
+              <source src={uiDemoW} type="video/webm" />
             </video>
           </div>
+          <div className="col-6">Or give the demo a play.</div>
         </div>
       </div>
     </section>
