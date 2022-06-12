@@ -77,13 +77,16 @@ export default function AudialCheckExample({ mockConfirmed, stopMock }) {
           tellRatioVoice.onstart = alert(
             "You have bet on 1000 lines but you have only won 20 lines. Your winning once in every 50 lines."
           );
-          let confirmForPlay = prompt("Would you like to continue playing?");
-          if (confirmForPlay === "no") {
-            alert("Thanks for playing we will see you next time");
-            stopMock();
-          } else {
-            ratioConfirmPlayerLimits();
-          }
+
+          tellRatioVoice.onend = function () {
+            let confirmForPlay = prompt("Would you like to continue playing?");
+            if (confirmForPlay === "no") {
+              alert("Thanks for playing we will see you next time");
+              stopMock();
+            } else {
+              ratioConfirmPlayerLimits();
+            }
+          };
         } else {
           noRatioConfirmPlayerLimits();
         }
