@@ -5,14 +5,17 @@ import interfaceChange from "./images/interfaceChange.png";
 export default function UiChange() {
   let [uiSetting, setUi] = useState("color");
 
-  function handleClickBland(event) {
+  function triggerAlert(event) {
     event.preventDefault();
-    setUi("bland");
-  }
+    let gamerAnswer = prompt(
+      "You have been playing for an hour. Would you like to keep playing?"
+    );
 
-  function handleClickColor(event) {
-    event.preventDefault();
-    setUi("color");
+    if (gamerAnswer === "yes") {
+      setUi("bland");
+    } else {
+      setUi("color");
+    }
   }
 
   return (
@@ -54,8 +57,7 @@ export default function UiChange() {
           Blurry? Click here.
         </a>
 
-        <button onClick={handleClickBland}>Its been 3 hours</button>
-        <button onClick={handleClickColor}>Its been 3 minutes</button>
+        <button onClick={triggerAlert}>Try mock example</button>
 
         <UiChangeExample uiSetting={uiSetting} />
       </small>
