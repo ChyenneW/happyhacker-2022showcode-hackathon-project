@@ -58,11 +58,15 @@ export default function AudialCheck() {
           Blurry? Click here.
         </a>
       </small>
-      <button onClick={triggerAlert}>Try mock example</button>
-      <AudialCheckExample
-        mockConfirmed={mockConfirmed}
-        stopMock={setToUnconfirm}
-      />
+      <div id="AudialExample">
+        <button onClick={triggerAlert} className="btn-primary">
+          Try mock example
+        </button>
+        <AudialCheckExample
+          mockConfirmed={mockConfirmed}
+          stopMock={setToUnconfirm}
+        />
+      </div>
     </section>
   );
 }

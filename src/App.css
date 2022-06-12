@@ -6,6 +6,16 @@
   padding: 30px;
   margin: 10px;
 }
+.Header nav {
+  display: flex;
+  justify-content: right;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+.Header a {
+  text-decoration: none;
+  font-weight: bold;
+}
 
 .Section {
   padding: 30px;
@@ -16,6 +26,16 @@
   max-width: 85%;
   display: block;
   margin: 0 auto;
+}
+.Section button {
+  display: block;
+  max-height: 30px;
+  align-items: center;
+}
+.Section small {
+  display: block;
+  justify-self: end;
+  margin-bottom: 20px;
 }
 
 .featureExample {

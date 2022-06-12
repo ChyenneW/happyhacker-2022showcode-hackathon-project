@@ -19,7 +19,7 @@ export default function UiChange() {
   }
 
   return (
-    <section className="Section">
+    <section className="Section UiChange">
       <h3>Turn on the bland</h3>
       <p>
         How does the environment affect the drive to over gamble?It is believed
@@ -43,6 +43,7 @@ export default function UiChange() {
       </p>
 
       <img
+        className="featureFlowchart"
         src={interfaceChange}
         alt="Screenshot of the flow of progression
       for this feature"
@@ -56,11 +57,17 @@ export default function UiChange() {
         >
           Blurry? Click here.
         </a>
-
-        <button onClick={triggerAlert}>Try mock example</button>
-
-        <UiChangeExample uiSetting={uiSetting} />
       </small>
+      <div className="container" id="UiExample">
+        <div className="row">
+          <button onClick={triggerAlert} className="btn-primary col-3">
+            Try mock example
+          </button>
+          <div className="col-9">
+            <UiChangeExample uiSetting={uiSetting} />
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

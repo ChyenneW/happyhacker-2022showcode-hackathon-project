@@ -3,6 +3,10 @@ import React from "react";
 export default function Header() {
   return (
     <header className="Header">
+      <nav>
+        <a href="#UiExample">Ui feature</a>
+        <a href="#AudialExample">Voice Check feature</a>
+      </nav>
       <h1>A Safer Betting Experience</h1>
       <p>
         This webpage details what a "safer betting experience" means, some of
