@@ -30,12 +30,20 @@
 .Section button {
   display: block;
   max-height: 30px;
-  align-items: center;
 }
 .Section small {
   display: block;
   justify-self: end;
   margin-bottom: 20px;
+}
+
+#AudialExample {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+#AudialExample .liveTryAudial {
+  grid-row: 1;
 }
 
 .featureExample {

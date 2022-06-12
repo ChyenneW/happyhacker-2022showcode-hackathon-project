@@ -59,13 +59,16 @@ export default function AudialCheck() {
         </a>
       </small>
       <div id="AudialExample">
-        <button onClick={triggerAlert} className="btn-primary">
-          Try mock example
-        </button>
-        <AudialCheckExample
-          mockConfirmed={mockConfirmed}
-          stopMock={setToUnconfirm}
-        />
+        <div className="liveTryAudial">
+          <button onClick={triggerAlert} className="btn-primary">
+            Try mock example
+          </button>
+          <AudialCheckExample
+            mockConfirmed={mockConfirmed}
+            stopMock={setToUnconfirm}
+          />
+        </div>
+        <div className="demoAudial"></div>
       </div>
     </section>
   );

@@ -88,8 +88,8 @@ export default function AudialCheckExample({ mockConfirmed, stopMock }) {
 
   if (mockConfirmed === "yes") {
     playMockExample();
-    return <div></div>;
+    return <div />;
   } else {
-    return <div></div>;
+    return <div />;
   }
 }
