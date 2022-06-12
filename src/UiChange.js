@@ -67,6 +67,9 @@ export default function UiChange() {
             <UiChangeExample uiSetting={uiSetting} />
           </div>
         </div>
+        <div className="row">
+          <div className="demoUi"></div>
+        </div>
       </div>
     </section>
   );
