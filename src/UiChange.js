@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import UiChangeExample from "./UiChangeExample";
 import interfaceChange from "./images/interfaceChange.png";
+import uiDemo from "./images/uiDemo.mp4";
 
 export default function UiChange() {
   let [uiSetting, setUi] = useState("color");
@@ -68,7 +69,11 @@ export default function UiChange() {
           </div>
         </div>
         <div className="row">
-          <div className="demoUi"></div>
+          <div className=" col-6 demoUi">
+            <video width="80%" hight="80%" controls>
+              <source scr={uiDemo} type="video/mp4" />
+            </video>
+          </div>
         </div>
       </div>
     </section>
