@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AudialCheckExample from "./AudialCheckExample";
 import audialCheck from "./images/audialCheck.png";
+import audialDemo from "./images/audialDemo.mp4";
 
 export default function AudialCheck() {
   let [mockConfirmed, setMockConfirmed] = useState("no");
@@ -63,12 +64,18 @@ export default function AudialCheck() {
           <button onClick={triggerAlert} className="btn-primary">
             Try mock example
           </button>
+          <br />
+          <p>Or play the demo</p>
           <AudialCheckExample
             mockConfirmed={mockConfirmed}
             stopMock={setToUnconfirm}
           />
         </div>
-        <div className="demoAudial"></div>
+        <div className="demoAudial">
+          <video width="80%" height="400px" controls>
+            <source src={audialDemo} type="video/mp4" />
+          </video>
+        </div>
       </div>
     </section>
   );

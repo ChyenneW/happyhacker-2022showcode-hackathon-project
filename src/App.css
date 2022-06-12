@@ -44,6 +44,7 @@
 
 #AudialExample .liveTryAudial {
   grid-row: 1;
+  font-size: large;
 }
 
 #UiExample {
