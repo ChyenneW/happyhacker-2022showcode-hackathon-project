@@ -1,46 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import AudialCheckExample from "./AudialCheckExample";
 import audialCheck from "./images/audialCheck.png";
 
 export default function AudialCheck() {
-  function triggerAlert(event) {
-    event.preventDefault();
-    alert("You have playing for one hour");
-    let confirmForRatio = prompt(
-      "Would you like to know your win to lose ratio for today?"
-    );
-    if (confirmForRatio === "yes") {
-      alert(
-        "You have bet on 1000 lines but you have only won 20 lines. Your win to loss ratio is 1:50. You are winning at a 2% rate"
-      );
-      let confirmForPlay = prompt("Would you like to continue playing?");
-      if (confirmForPlay === "no") {
-        alert("Thanks for playing we will see you next time");
-      } else {
-        let confirmForPlayerLimits = prompt(
-          "Would you like to visit the Player Limits settings before you continue?"
-        );
-        if (confirmForPlayerLimits === "yes") {
-          alert("loading Player Limits");
-        } else {
-          alert("Thank you for your feedback.");
-        }
-      }
-    } else {
-      let confirmForPlyerLimits = prompt(
-        "Would you like to visit the Player Limits settings?"
-      );
-      if (confirmForPlyerLimits === "yes") {
-        alert("loading Player Limits");
-      } else {
-        let confirmForPlay = prompt("Would you like to continue playing?");
-        if (confirmForPlay === "no") {
-          alert("Thanks for playing we will see you next time.");
-        } else {
-          alert("Thank you for your feedback.");
-        }
-      }
-    }
+  let [mockConfirmed, setMockConfirmed] = useState("no");
+
+  function setToUnconfirm() {
+    setMockConfirmed("No");
+  }
+
+  function triggerAlert() {
+    setMockConfirmed("yes");
+    console.log("clicked");
   }
 
   return (
@@ -88,7 +59,10 @@ export default function AudialCheck() {
         </a>
       </small>
       <button onClick={triggerAlert}>Try mock example</button>
-      <AudialCheckExample />
+      <AudialCheckExample
+        mockConfirmed={mockConfirmed}
+        stopMock={setToUnconfirm}
+      />
     </section>
   );
 }
