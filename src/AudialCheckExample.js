@@ -1,16 +1,6 @@
 import React from "react";
 
 export default function AudialCheckExample({ mockConfirmed, stopMock }) {
-  // function playTellRatioVoice() {
-  //  let tellRatioVoice = new SpeechSynthesisUtterance();
-  // tellRatioVoice.text =
-  //   "You have bet on 1000 lines but you have only won 20 lines. Your win to loss ratio is 1:50. You are winning at a 2% rate";
-  //  window.speechSynthesis.speak(tellRatioVoice);
-  //   tellRatioVoice.onstart = alert(
-  //      "You have bet on 1000 lines but you have only won 20 lines. Your win to loss ratio is 1:50. You are winning at a 2% rate"
-  //    );
-  //  }
-
   function ratioConfirmPlayerLimits() {
     let confirmForPlayerLimitsVoice = new SpeechSynthesisUtterance();
     confirmForPlayerLimitsVoice.text =
@@ -62,12 +52,12 @@ export default function AudialCheckExample({ mockConfirmed, stopMock }) {
 
       let voiceForRatio = new SpeechSynthesisUtterance();
       voiceForRatio.text =
-        "Would you like to know your win to lose ratio for today?";
+        "Would you like to know your win to loss ratio for today?";
       window.speechSynthesis.speak(voiceForRatio);
 
       voiceForRatio.onstart = function () {
         let confirmForRatio = prompt(
-          "Would you like to know your win to lose ratio for today?"
+          "Would you like to know your win to loss ratio for today?"
         );
         if (confirmForRatio === "yes") {
           let tellRatioVoice = new SpeechSynthesisUtterance();
