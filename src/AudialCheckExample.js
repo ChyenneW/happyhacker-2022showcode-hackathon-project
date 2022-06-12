@@ -3,9 +3,9 @@ import React from "react";
 export default function AudialCheckExample({ mockConfirmed, stopMock }) {
   function playTellRatioVoice() {
     let tellRatioVoice = new SpeechSynthesisUtterance();
-    window.speechSynthesis.speak(tellRatioVoice);
     tellRatioVoice.text =
       "You have bet on 1000 lines but you have only won 20 lines. Your win to loss ratio is 1:50. You are winning at a 2% rate";
+    window.speechSynthesis.speak(tellRatioVoice);
     tellRatioVoice.onstart = alert(
       "You have bet on 1000 lines but you have only won 20 lines. Your win to loss ratio is 1:50. You are winning at a 2% rate"
     );
@@ -70,7 +70,13 @@ export default function AudialCheckExample({ mockConfirmed, stopMock }) {
           "Would you like to know your win to lose ratio for today?"
         );
         if (confirmForRatio === "yes") {
-          playTellRatioVoice();
+          let tellRatioVoice = new SpeechSynthesisUtterance();
+          tellRatioVoice.text =
+            "You have bet on 1000 lines but you have only won 20 lines. Your win to loss ratio is 1:50. You are winning at a 2% rate";
+          window.speechSynthesis.speak(tellRatioVoice);
+          tellRatioVoice.onstart = alert(
+            "You have bet on 1000 lines but you have only won 20 lines. Your win to loss ratio is 1:50. You are winning at a 2% rate"
+          );
           let confirmForPlay = prompt("Would you like to continue playing?");
           if (confirmForPlay === "no") {
             alert("Thanks for playing we will see you next time");
